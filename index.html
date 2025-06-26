@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vợ có yêu chồng không?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f5;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(24px, 6vw, 48px);
+      color: #d6336c;
+      margin-bottom: 40px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 1em 2em;
+      font-size: clamp(16px, 4vw, 24px);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #yesBtn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    #yesBtn:hover {
+      background-color: #218838;
+    }
+
+    #noBtn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    #noBtn:hover {
+      background-color: #c82333;
+    }
+
+    #result {
+      font-size: clamp(24px, 6vw, 48px);
+      font-weight: bold;
+      margin-top: 30px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Vợ có yêu chồng không?</h1>
+  <div>
+    <button id="yesBtn">Có</button>
+    <button id="noBtn">Không</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("yesBtn").onclick = function () {
+      document.body.innerHTML = "<h1 style='color:#28a745; font-size:clamp(24px,6vw,48px)'>Móc 2 cái</h1>";
+    };
+    document.getElementById("noBtn").onclick = function () {
+      document.body.innerHTML = "<h1 style='color:#dc3545; font-size:clamp(24px,6vw,48px)'>Móc đến khi nào thích thì thôi</h1>";
+    };
+  </script>
+</body>
+</html>
